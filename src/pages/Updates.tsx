@@ -12,7 +12,7 @@ function Updates() {
           <h1>Updates</h1>
           
           <div className="video-container">
-            <video autoPlay muted controls className="updates-video">
+            <video autoPlay muted loop controls className="updates-video">
               <source src="/yeyeye.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
