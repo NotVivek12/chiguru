@@ -1,0 +1,352 @@
+.header {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 24px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    min-height: 64px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header .chiguru-logo {
+    margin-left: 500px;
+}
+
+.header .left,
+.header .center,
+.header .right {
+    display: flex;
+    align-items: center;
+}
+
+.header .center {
+    justify-content: center;
+    flex: 0 0 auto;
+    margin: 0 12px;
+}
+
+.header img {
+    height: 40px;
+    display: block;
+}
+
+
+.header img.logo-center {
+    height: 44px;
+}
+.chiguru-logo {
+    margin-left: 350px;
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.header li {
+    margin: 0;
+}
+
+.header li.join-btn-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.header a,
+.header a:link,
+.header a:visited {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    padding: 6px 2px;
+    display: inline-block;
+}
+
+.header a:hover {
+    opacity: 0.9;
+    text-decoration: none;
+}
+
+.header > div:first-child,
+.header > div:nth-child(2) {
+    flex-shrink: 0;
+}
+
+.header > div:first-child a,
+.header > div:nth-child(2) a {
+    padding: 0;
+    display: block;
+    line-height: 0;
+}
+
+.join-btn,
+.header .join-btn {
+    background: #f6b400; 
+    color: #111;
+    padding: 8px 16px !important;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    display: inline-block;
+}
+
+.join-btn:hover,
+.header .join-btn:hover {
+    filter: brightness(0.95);
+    transform: translateY(-1px);
+}
+
+/* Mobile Menu Styles */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    display: block;
+    position: absolute;
+}
+
+.mobile-menu-toggle span:nth-child(1) {
+    top: 12px;
+}
+
+.mobile-menu-toggle span:nth-child(2) {
+    top: 18.5px;
+}
+
+.mobile-menu-toggle span:nth-child(3) {
+    bottom: 12px;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    top: 18.5px;
+    transform: rotate(45deg);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    bottom: 18.5px;
+    transform: rotate(-45deg);
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+    .header .chiguru-logo {
+        margin-left: 200px;
+    }
+    
+    .header ul {
+        gap: 15px;
+    }
+    
+    .header a {
+        font-size: 12px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 16px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        width: 100vw;
+        left: 0;
+    }
+    
+    .header .chiguru-logo {
+        margin-left: 0;
+    }
+    
+    .header img {
+        height: 32px;
+    }
+    
+    .header > div:first-child,
+    .header > div:nth-child(2) {
+        transition: opacity 0.3s ease;
+    }
+    
+    .header.menu-open > div:first-child,
+    .header.menu-open > div:nth-child(2) {
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+        order: 3;
+        margin-left: auto;
+    }
+    
+    .header > div:first-child {
+        order: 1;
+        flex-shrink: 0;
+    }
+    
+    .header > div:nth-child(2) {
+        order: 2;
+        flex-shrink: 0;
+        margin: 0 auto 0 15px;
+    }
+    
+    .header > div:nth-child(3) {
+        order: 4;
+        width: 100vw;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .header ul {
+        flex-direction: column;
+        width: 100vw;
+        gap: 0;
+        background: rgba(0, 0, 0, 0.98);
+        backdrop-filter: blur(10px);
+        padding: 0;
+        border-radius: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        margin: 0;
+    }
+    
+    .header ul.mobile-menu-open {
+        max-height: 650px;
+        padding: 20px 0 15px;
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .mobile-menu-logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0 30px !important;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2) !important;
+        margin-bottom: 10px;
+    }
+    
+    .mobile-menu-logos .mobile-logo {
+        height: 45px;
+    }
+    
+    .header li {
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .header li:last-child {
+        border-bottom: none;
+    }
+    
+    .header a {
+        font-size: 17px;
+        display: block;
+        padding: 12px 20px;
+        width: 100%;
+    }
+    
+    .header li.join-btn-wrapper {
+        padding: 15px 20px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .header li.join-btn-wrapper button {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 8px 12px;
+    }
+    
+    .header img {
+        height: 28px;
+    }
+    
+    .header > div:nth-child(2) {
+        margin-left: 10px;
+    }
+    
+    .header > div:nth-child(3) {
+        top: 56px;
+    }
+    
+    .mobile-menu-toggle span {
+        width: 22px;
+        height: 2.5px;
+    }
+    
+    .header a {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+    
+    .mobile-menu-logos .mobile-logo {
+        height: 40px;
+    }
+    
+    .header li.join-btn-wrapper {
+        padding: 12px 15px;
+    }
+}
+
+@media (max-width: 720px) {
+    .header {
+        padding: 8px 12px;
+    }
+    .header ul { gap: 12px; }
+    .header a { font-size: 13px; }
+}
