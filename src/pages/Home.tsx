@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import './Home.css';
 import Header from '../components/header';
+import logoSvg from '../assets/logo.svg';
 
 function Home() {
   useEffect(() => {
@@ -88,7 +89,7 @@ function Home() {
         </div>
         
         <div className="hero-content">
-          <img src="/src/assets/logo.svg" alt="Navarupa - New Form of Life" className="navarupa-logo" />
+          <img src={logoSvg} alt="Navarupa - New Form of Life" className="navarupa-logo" />
         </div>
       </section>
 

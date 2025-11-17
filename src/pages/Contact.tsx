@@ -1,5 +1,6 @@
 import './Contact.css';
 import Header from '../components/header';
+import logoSvg from '../assets/logo.svg';
 
 function Contact() {
   return (
@@ -7,7 +8,7 @@ function Contact() {
       <Header />
       <section className="contact-page">
         <div className="contact-container">
-          <img src="/src/assets/logo.svg" alt="Navarupa Logo" className="contact-logo" />
+          <img src={logoSvg} alt="Navarupa Logo" className="contact-logo" />
           <h1>For Queries Contact:</h1>
           
           <div className="contact-cards">
