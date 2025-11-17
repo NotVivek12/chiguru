@@ -27,7 +27,7 @@ h1, h2, h3 {
   text-align: center;
   padding: 100px 50px;
   height: 100vh;
-  background: url('Slice 5.png') no-repeat center center;
+  background: url('/Slice 5.png') no-repeat center center;
   background-size: cover;
   position: relative;
   z-index: 10;
