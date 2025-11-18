@@ -1,7 +1,6 @@
 import './Contact.css';
 import Header from '../components/header';
-import { AdvancedImage } from '@cloudinary/react';
-import { getOptimizedImage } from '../config/cloudinary';
+import logoSvg from '../assets/logo.png';
 
 function Contact() {
   return (
@@ -9,7 +8,7 @@ function Contact() {
       <Header />
       <section className="contact-page">
         <div className="contact-container">
-          <AdvancedImage cldImg={getOptimizedImage('logo')} alt="Navarupa Logo" className="contact-logo" />
+          <img src={logoSvg} alt="Navarupa Logo" className="contact-logo" />
           <h1>For Queries Contact:</h1>
           
           <div className="contact-cards">
