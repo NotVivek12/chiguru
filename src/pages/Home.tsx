@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import './Home.css';
 import Header from '../components/header';
 import logoSvg from '../assets/logo.svg';
+import { OptimizedImage } from '../components/OptimizedImage';
 
 function Home() {
   useEffect(() => {
@@ -79,13 +80,13 @@ function Home() {
       {/* Hero Section */}
       <section className="hero">
         <div className="stars">
-          <img src="/background.png" alt="" />
+          <OptimizedImage src="/background.png" alt="Stars background" />
         </div>
         <div className="butterfly butterfly1">
-          <img src="/bbf1.png" alt="" />
+          <OptimizedImage src="/bbf1.png" alt="Butterfly 1" />
         </div>
         <div className="butterfly butterfly2">
-          <img src="/bbf2.png" alt="" />
+          <OptimizedImage src="/bbf2.png" alt="Butterfly 2" />
         </div>
         
         <div className="hero-content">
@@ -122,7 +123,7 @@ function Home() {
         </div>
         <div className="about-image">
           <div className="placeholder-img">
-            <img src="/blue.png" alt="Chiguru celebration" />
+            <OptimizedImage src="/blue.png" alt="Chiguru celebration" />
           </div>
         </div>
       </section>
@@ -136,7 +137,7 @@ function Home() {
       <section className="about">
         <div className="about-image">
           <div className="placeholder-img">
-            <img src="/blue2.png" alt="Chiguru celebration" />
+            <OptimizedImage src="/blue2.png" alt="Chiguru celebration" />
           </div>
         </div>
         <div className="about-text">
@@ -153,18 +154,18 @@ function Home() {
       <section className="celebrity">
         <h2>PREVIOUS YEAR CELEBRITY</h2>
         <div className="celebrity-grid">
-          <div className="celebrity-card"><img src="/celebs/Celebrity 1.png" alt="Celebrity" /></div>
-          <div className="celebrity-card"><img src="/celebs/Celebrity 2.png" alt="Celebrity" /></div>
-          <div className="celebrity-card"><img src="/celebs/Celebrity 3.png" alt="Celebrity" /></div>
-          <div className="celebrity-card"><img src="/celebs/Celebrity 4.png" alt="Celebrity" /></div>
-          <div className="celebrity-card"><img src="/celebs/Celebrity 5.png" alt="Celebrity" /></div>
-          <div className="celebrity-card"><img src="/celebs/Celebrity 6.png" alt="Celebrity" /></div>
-          <div className="celebrity-card"><img src="/celebs/Celebrity 7.png" alt="Celebrity" /></div>
-          <div className="celebrity-card"><img src="/celebs/Celebrity 8.png" alt="Celebrity" /></div>
-          <div className="celebrity-card"><img src="/celebs/Celebrity 9.png" alt="Celebrity" /></div>
-          <div className="celebrity-card"><img src="/celebs/Celebrity 10.png" alt="Celebrity" /></div>
-          <div className="celebrity-card"><img src="/celebs/Celebrity 11.png" alt="Celebrity" /></div>
-          <div className="celebrity-card"><img src="/celebs/Celebrity 12.png" alt="Celebrity" /></div>
+          <div className="celebrity-card"><OptimizedImage src="/celebs/Celebrity 1.png" alt="Celebrity 1" /></div>
+          <div className="celebrity-card"><OptimizedImage src="/celebs/Celebrity 2.png" alt="Celebrity 2" /></div>
+          <div className="celebrity-card"><OptimizedImage src="/celebs/Celebrity 3.png" alt="Celebrity 3" /></div>
+          <div className="celebrity-card"><OptimizedImage src="/celebs/Celebrity 4.png" alt="Celebrity 4" /></div>
+          <div className="celebrity-card"><OptimizedImage src="/celebs/Celebrity 5.png" alt="Celebrity 5" /></div>
+          <div className="celebrity-card"><OptimizedImage src="/celebs/Celebrity 6.png" alt="Celebrity 6" /></div>
+          <div className="celebrity-card"><OptimizedImage src="/celebs/Celebrity 7.png" alt="Celebrity 7" /></div>
+          <div className="celebrity-card"><OptimizedImage src="/celebs/Celebrity 8.png" alt="Celebrity 8" /></div>
+          <div className="celebrity-card"><OptimizedImage src="/celebs/Celebrity 9.png" alt="Celebrity 9" /></div>
+          <div className="celebrity-card"><OptimizedImage src="/celebs/Celebrity 10.png" alt="Celebrity 10" /></div>
+          <div className="celebrity-card"><OptimizedImage src="/celebs/Celebrity 11.png" alt="Celebrity 11" /></div>
+          <div className="celebrity-card"><OptimizedImage src="/celebs/Celebrity 12.png" alt="Celebrity 12" /></div>
         </div>
       </section>
 

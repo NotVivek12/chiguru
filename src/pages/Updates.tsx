@@ -1,6 +1,7 @@
 import './Updates.css';
 import Header from '../components/header';
 import logoSvg from '../assets/logo.svg';
+import { OptimizedVideo } from '../components/OptimizedVideo';
 
 function Updates() {
   return (
@@ -11,12 +12,11 @@ function Updates() {
           <img src={logoSvg} alt="Navarupa Logo" className="updates-logo" />
           <h1>Updates</h1>
           
-          <div className="video-container">
-            <video autoPlay muted loop controls className="updates-video">
-              <source src="/yeyeye.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+          <OptimizedVideo 
+            src="/yeyeye.mp4" 
+            className="video-container"
+            poster="/poster.png"
+          />
           
           <div className="video-description">
             <p>Stay tuned for the latest updates about Chiguru 2025!</p>
