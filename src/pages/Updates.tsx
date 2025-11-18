@@ -1,8 +1,17 @@
 import './Updates.css';
 import Header from '../components/header';
 import logoSvg from '../assets/logo.svg';
+import { AdvancedVideo } from '@cloudinary/react';
+import { Cloudinary } from '@cloudinary/url-gen';
+
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: 'dett31xav'
+  }
+});
 
 function Updates() {
+  const video = cld.video('yeyeye_tpxz1b').format('auto').quality('auto');
   return (
     <>
       <Header />
@@ -12,10 +21,14 @@ function Updates() {
           <h1>Updates</h1>
           
           <div className="video-container">
-            <video autoPlay muted loop controls className="updates-video">
-              <source src="/yeyeye.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <AdvancedVideo 
+              cldVid={video} 
+              autoPlay 
+              muted 
+              loop 
+              controls 
+              className="updates-video"
+            />
           </div>
           
           <div className="video-description">

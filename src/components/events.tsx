@@ -1,119 +1,121 @@
 import './events.css';
+import { AdvancedImage } from '@cloudinary/react';
+import { getOptimizedImage } from '../config/cloudinary';
 
 const eventsData = [
   {
     id: 1,
-    image: '/Varients/Varient (1).png',
+    image: 'Varient_1',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   },
   {
     id: 2,
-    image: '/Varients/Varient (2).png',
+    image: 'Varient_2',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   },
   {
     id: 3,
-    image: '/Varients/Varient (3).png',
+    image: 'Varient_3',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   },
   {
     id: 4,
-    image: '/Varients/Varient (4).png',
+    image: 'Varient_4',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   },
   {
     id: 5,
-    image: '/Varients/Varient (5).png',
+    image: 'Varient_5',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   },
   {
     id: 6,
-    image: '/Varients/Varient (6).png',
+    image: 'Varient_6',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   },
   {
     id: 7,
-    image: '/Varients/Varient (7).png',
+    image: 'Varient_7',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   },
   {
     id: 8,
-    image: '/Varients/Varient (8).png',
+    image: 'Varient_8',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   },
   {
     id: 9,
-    image: '/Varients/Varient (9).png',
+    image: 'Varient_9',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   },
   {
     id: 10,
-    image: '/Varients/Varient (10).png',
+    image: 'Varient_10',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   },
   {
     id: 11,
-    image: '/Varients/Varient (11).png',
+    image: 'Varient_11',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   },
   {
     id: 12,
-    image: '/Varients/Varient (12).png',
+    image: 'Varient_12',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   },
   {
     id: 13,
-    image: '/Varients/Varient (13).png',
+    image: 'Varient_13',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   },
   {
     id: 14,
-    image: '/Varients/Varient (14).png',
+    image: 'Varient_14',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   },
   {
     id: 15,
-    image: '/Varients/Varient (15).png',
+    image: 'Varient_15',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   },
   {
     id: 16,
-    image: '/Varients/Varient (16).png',
+    image: 'Varient_16',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   },
   {
     id: 17,
-    image: '/Varients/Varient (17).png',
+    image: 'Varient_17',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   },
   {
     id: 18,
-    image: '/Varients/Varient (18).png',
+    image: 'Varient_18',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   },
   {
     id: 19,
-    image: '/Varients/Varient (19).png',
+    image: 'Varient_19',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   },
   {
     id: 20,
-    image: '/Varients/Varient (20).png',
+    image: 'Varient_20',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   },
   {
     id: 21,
-    image: '/Varients/Varient (21).png',
+    image: 'Varient_21',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   },
   {
     id: 22,
-    image: '/Varients/Varient (22).png',
+    image: 'Varient_22',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   },
   {
     id: 23,
-    image: '/Varients/Varient (23).png',
+    image: 'Varient_23',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf1catBP9-LIE2M1sA-f2xgY-9c_4bZ0_C_c4Nh7aVBfGN1zQ/viewform'
   }
 ];
@@ -128,7 +130,7 @@ const Events = () => {
         {eventsData.map((event) => (
           <div key={event.id} className="card">
             <a href={event.link} target="_blank" rel="noopener noreferrer">
-              <img src={event.image} alt={`Event ${event.id}`} />
+              <AdvancedImage cldImg={getOptimizedImage(event.image)} alt={`Event ${event.id}`} />
             </a>
           </div>
         ))}

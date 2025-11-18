@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import './Home.css';
 import Header from '../components/header';
 import logoSvg from '../assets/logo.svg';
+import { AdvancedImage } from '@cloudinary/react';
+import { getOptimizedImage } from '../config/cloudinary';
 
 function Home() {
   useEffect(() => {
@@ -79,13 +81,13 @@ function Home() {
       {/* Hero Section */}
       <section className="hero">
         <div className="stars">
-          <img src="/background.png" alt="" />
+          <AdvancedImage cldImg={getOptimizedImage('background_e9uebm')} alt="Stars" />
         </div>
         <div className="butterfly butterfly1">
-          <img src="/bbf1.png" alt="" />
+          <AdvancedImage cldImg={getOptimizedImage('bbf1_dkze33')} alt="Butterfly" />
         </div>
         <div className="butterfly butterfly2">
-          <img src="/bbf2.png" alt="" />
+          <AdvancedImage cldImg={getOptimizedImage('bbf2_xsvmve')} alt="Butterfly" />
         </div>
         
         <div className="hero-content">
@@ -122,7 +124,7 @@ function Home() {
         </div>
         <div className="about-image">
           <div className="placeholder-img">
-            <img src="/blue.png" alt="Chiguru celebration" />
+            <AdvancedImage cldImg={getOptimizedImage('blue_lfhbpv')} alt="Chiguru celebration" />
           </div>
         </div>
       </section>
@@ -136,7 +138,7 @@ function Home() {
       <section className="about">
         <div className="about-image">
           <div className="placeholder-img">
-            <img src="/blue2.png" alt="Chiguru celebration" />
+            <AdvancedImage cldImg={getOptimizedImage('blue2_zkif0n')} alt="Chiguru celebration" />
           </div>
         </div>
         <div className="about-text">
@@ -153,18 +155,18 @@ function Home() {
       <section className="celebrity">
         <h2>PREVIOUS YEAR CELEBRITY</h2>
         <div className="celebrity-grid">
-          <div className="celebrity-card"><img src="/celebs/Celebrity 1.png" alt="Celebrity" /></div>
-          <div className="celebrity-card"><img src="/celebs/Celebrity 2.png" alt="Celebrity" /></div>
-          <div className="celebrity-card"><img src="/celebs/Celebrity 3.png" alt="Celebrity" /></div>
-          <div className="celebrity-card"><img src="/celebs/Celebrity 4.png" alt="Celebrity" /></div>
-          <div className="celebrity-card"><img src="/celebs/Celebrity 5.png" alt="Celebrity" /></div>
-          <div className="celebrity-card"><img src="/celebs/Celebrity 6.png" alt="Celebrity" /></div>
-          <div className="celebrity-card"><img src="/celebs/Celebrity 7.png" alt="Celebrity" /></div>
-          <div className="celebrity-card"><img src="/celebs/Celebrity 8.png" alt="Celebrity" /></div>
-          <div className="celebrity-card"><img src="/celebs/Celebrity 9.png" alt="Celebrity" /></div>
-          <div className="celebrity-card"><img src="/celebs/Celebrity 10.png" alt="Celebrity" /></div>
-          <div className="celebrity-card"><img src="/celebs/Celebrity 11.png" alt="Celebrity" /></div>
-          <div className="celebrity-card"><img src="/celebs/Celebrity 12.png" alt="Celebrity" /></div>
+          <div className="celebrity-card"><AdvancedImage cldImg={getOptimizedImage('Celebrity_1')} alt="Celebrity" /></div>
+          <div className="celebrity-card"><AdvancedImage cldImg={getOptimizedImage('Celebrity_2')} alt="Celebrity" /></div>
+          <div className="celebrity-card"><AdvancedImage cldImg={getOptimizedImage('Celebrity_3')} alt="Celebrity" /></div>
+          <div className="celebrity-card"><AdvancedImage cldImg={getOptimizedImage('Celebrity_4')} alt="Celebrity" /></div>
+          <div className="celebrity-card"><AdvancedImage cldImg={getOptimizedImage('Celebrity_5')} alt="Celebrity" /></div>
+          <div className="celebrity-card"><AdvancedImage cldImg={getOptimizedImage('Celebrity_6')} alt="Celebrity" /></div>
+          <div className="celebrity-card"><AdvancedImage cldImg={getOptimizedImage('Celebrity_7')} alt="Celebrity" /></div>
+          <div className="celebrity-card"><AdvancedImage cldImg={getOptimizedImage('Celebrity_8')} alt="Celebrity" /></div>
+          <div className="celebrity-card"><AdvancedImage cldImg={getOptimizedImage('Celebrity_9')} alt="Celebrity" /></div>
+          <div className="celebrity-card"><AdvancedImage cldImg={getOptimizedImage('Celebrity_10')} alt="Celebrity" /></div>
+          <div className="celebrity-card"><AdvancedImage cldImg={getOptimizedImage('Celebrity_11')} alt="Celebrity" /></div>
+          <div className="celebrity-card"><AdvancedImage cldImg={getOptimizedImage('Celebrity_12')} alt="Celebrity" /></div>
         </div>
       </section>
 
