@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import './Home.css';
 import Header from '../components/header';
-import logoSvg from '../assets/logo.svg';
+import logoSvg from '../assets/logo.png';
 import { AdvancedImage } from '@cloudinary/react';
 import { getOptimizedImage } from '../config/cloudinary';
 

@@ -1,6 +1,6 @@
 import './Updates.css';
 import Header from '../components/header';
-import logoSvg from '../assets/logo.svg';
+import logoSvg from '../assets/logo.png';
 import { AdvancedVideo } from '@cloudinary/react';
 import { Cloudinary } from '@cloudinary/url-gen';
 

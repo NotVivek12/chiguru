@@ -1,6 +1,6 @@
 import './Contact.css';
 import Header from '../components/header';
-import logoSvg from '../assets/logo.svg';
+import logoSvg from '../assets/logo.png';
 
 function Contact() {
   return (
