@@ -1,5 +1,4 @@
 import './events.css';
-import { OptimizedImage } from './OptimizedImage';
 
 const eventsData = [
   {
@@ -129,7 +128,7 @@ const Events = () => {
         {eventsData.map((event) => (
           <div key={event.id} className="card">
             <a href={event.link} target="_blank" rel="noopener noreferrer">
-              <OptimizedImage src={event.image} alt={`Event ${event.id}`} />
+              <img src={event.image} alt={`Event ${event.id}`} />
             </a>
           </div>
         ))}
