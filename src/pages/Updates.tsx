@@ -1,8 +1,9 @@
 import './Updates.css';
 import Header from '../components/header';
-import logoSvg from '../assets/logo.png';
 import { AdvancedVideo } from '@cloudinary/react';
+import { AdvancedImage } from '@cloudinary/react';
 import { Cloudinary } from '@cloudinary/url-gen';
+import { getOptimizedImage } from '../config/cloudinary';
 
 const cld = new Cloudinary({
   cloud: {
@@ -17,7 +18,7 @@ function Updates() {
       <Header />
       <section className="updates-page">
         <div className="updates-container">
-          <img src={logoSvg} alt="Navarupa Logo" className="updates-logo" />
+          <AdvancedImage cldImg={getOptimizedImage('logo')} alt="Navarupa Logo" className="updates-logo" />
           <h1>Updates</h1>
           
           <div className="video-container">

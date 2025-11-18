@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import './Home.css';
 import Header from '../components/header';
-import logoSvg from '../assets/logo.png';
 import { AdvancedImage } from '@cloudinary/react';
 import { getOptimizedImage } from '../config/cloudinary';
 
@@ -91,7 +90,7 @@ function Home() {
         </div>
         
         <div className="hero-content">
-          <img src={logoSvg} alt="Navarupa - New Form of Life" className="navarupa-logo" />
+          <AdvancedImage cldImg={getOptimizedImage('logo')} alt="Navarupa - New Form of Life" className="navarupa-logo" />
         </div>
       </section>
 
